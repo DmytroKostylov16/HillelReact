@@ -1,9 +1,9 @@
 
-import ReactComponent from './components/ReactComponent.js'
+import SmilesPage from "./pages/smiles";
 function App() {
   return (
       <div>
-          <ReactComponent />
+          <SmilesPage />
       </div>
   );
 }
