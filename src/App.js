@@ -1,9 +1,13 @@
+import Header from './components/Header'
+import Footer from './components/Footer'
+import EmojisPage from './EmojisPage/EmojisPage'
 
-import ReactComponent from './components/ReactComponent.js'
 function App() {
   return (
       <div>
-          <ReactComponent />
+          <Header />
+          <EmojisPage />
+          <Footer />
       </div>
   );
 }
