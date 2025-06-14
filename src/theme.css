@@ -1,0 +1,46 @@
+.mode-light{
+    color: #000000;
+    background-color: #ffffff;
+}
+.mode-dark{
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.nav-menu{
+    padding: 10px 10px;
+}
+
+.nav-menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    margin-right: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transition: transform 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.nav-menu a.active {
+    transform: scale(1.2);
+}
+
+.nav-menu a.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
