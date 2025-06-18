@@ -2,18 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import SmilesProvider from './pages/emojis/context/VotingContext';
 import ThemeProvider from "./contexts/ThemeContext";
+import { Provider } from 'react-redux'
 import { BrowserRouter } from "react-router";
+import store from './store';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
-            <ThemeProvider>
-                <SmilesProvider>
-                    <App />
-                </SmilesProvider>
-            </ThemeProvider>
-        </BrowserRouter>
+        <Provider store={store}>
+            <BrowserRouter>
+                <ThemeProvider>
+                    <SmilesProvider>
+                        <App />
+                    </SmilesProvider>
+                </ThemeProvider>
+            </BrowserRouter>
+        </Provider>
     </React.StrictMode>
 );
