@@ -1,9 +1,10 @@
-
-import ReactComponent from './components/ReactComponent.js'
+import AddTask from './pages/tasks/components/AddTask';
+import TaskRedux from './pages/tasks'
 function App() {
   return (
       <div>
-          <ReactComponent />
+          <AddTask />
+          <TaskRedux />
       </div>
   );
 }
